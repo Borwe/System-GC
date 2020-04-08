@@ -25,7 +25,7 @@ public class App {
 				try {
 					Thread.sleep(1002);
 					System.gc();
-					System.out.println("GC HAPPENED");
+					//System.out.println("GC HAPPENED");
 				} catch (InterruptedException e) {
 					e.printStackTrace();
 				}
