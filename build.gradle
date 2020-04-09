@@ -61,3 +61,7 @@ task fatJar(type: Jar) {
 artifacts {
     archives fatJar
 }
+
+//set the java version to be used to 8
+sourceCompatibility=JavaVersion.VERSION_1_8;
+targetCompatibility=JavaVersion.VERSION_1_8;

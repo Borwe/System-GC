@@ -20,7 +20,7 @@ public class App {
 	}
 	
     private static void beginGCThread(){
-		var thread=new Thread(()->{
+		Thread thread=new Thread(()->{
 			while(true) {
 				try {
 					Thread.sleep(1002);
