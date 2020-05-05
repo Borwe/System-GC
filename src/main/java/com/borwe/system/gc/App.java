@@ -7,20 +7,17 @@ import java.lang.instrument.Instrumentation;
 
 public class App {
 	
-	
 	public static void premain(String agentArgs,Instrumentation inst) {
-		System.out.println("Using Premain GC");
-//		getAllClassesAndSetupGC(agentArgs, inst);
         beginGCThread();
 	}
 
 	public static void agentmain(String agentArgs,Instrumentation inst) {
-		System.out.println("Using Agentmain GC");
         beginGCThread();
 	}
 	
     private static void beginGCThread(){
 		Thread thread=new Thread(()->{
+            //sleep for 5 minutes, before starting the GC stuff
 			while(true) {
 				try {
 					Thread.sleep(1002);
